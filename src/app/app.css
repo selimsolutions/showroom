@@ -1,0 +1,4 @@
+:host { display:block; min-height:100vh; }
+.site-footer{display:flex;align-items:center;gap:9px;padding:26px clamp(20px,5vw,76px);border-top:1px solid #e8e8e8;color:#777;font-size:11px;letter-spacing:.12em}
+.site-footer span{color:#e7470b;font-size:17px;font-weight:900;letter-spacing:-.08em}
+.site-footer small{margin-left:auto;letter-spacing:.04em;font-size:12px}

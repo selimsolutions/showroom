@@ -1,0 +1,18 @@
+<article class="auto-card">
+  <div class="card-image">
+    <span class="stock-label">{{ car.availability }} IN STOCK</span>
+    <button class="fav" [class.active]="isFavorite" (click)="toggleFavorite()"
+      [attr.aria-label]="isFavorite ? 'Remove from favorites' : 'Add to favorites'">
+      <fa-icon [icon]="faHeart"></fa-icon>
+    </button>
+    <img [src]="'images/' + car.photo" [alt]="car.brand + ' ' + car.model" (click)="select()">
+  </div>
+  <div class="details">
+    <p class="brand">{{ car.brand }}</p>
+    <h3>{{ car.model }}</h3>
+    <div class="mini-specs"><span>{{ car.power }} power</span><span>{{ car.range }} km range</span></div>
+    <div class="card-bottom"><div class="price"><strong>{{ car.price }} <small>DNT</small></strong><span>per day</span></div>
+      <button class="see-more" (click)="select()" aria-label="View car details">↗</button>
+    </div>
+  </div>
+</article>

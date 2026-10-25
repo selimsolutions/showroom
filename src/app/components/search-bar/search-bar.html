@@ -1,0 +1,19 @@
+<div class="container">
+  <label>Brand</label>
+  <input type="text" #brand (input)="selectAutos(brand.value)">
+  <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+</div>
+
+
+<div class="cars-container">
+  @for (auto of selectedAutos; track auto.id) {
+    <app-car-card
+  [car]="auto"
+  [isFavorite]="favorites.includes(auto)"
+  (onSelect)="selectCar($event)"
+  (onToggleFavorite)="toggleFavorite($event)">
+</app-car-card>
+  } @empty {
+    <p class="empty">No cars match your search.</p>
+  }
+</div>

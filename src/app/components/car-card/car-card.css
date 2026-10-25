@@ -1,0 +1,15 @@
+:host{display:block;width:min(100%,340px);min-width:0}
+.auto-card{height:100%;background:#fff;border:1px solid #e9e9eb;border-radius:18px;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s}
+.auto-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px #11111112;border-color:#f0b39a}
+.card-image{height:190px;background:radial-gradient(ellipse at 50% 75%,#e8e9eb,transparent 64%),#f8f8f8;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-image img{width:94%;height:160px;object-fit:contain;cursor:pointer;transition:transform .35s;filter:drop-shadow(0 12px 8px #1112)}
+.auto-card:hover .card-image img{transform:scale(1.05)}
+.stock-label{position:absolute;left:14px;top:14px;background:#fff;border:1px solid #eee;border-radius:999px;padding:6px 9px;font-size:7px;letter-spacing:.12em;color:#656b74;z-index:2}
+.fav{position:absolute;right:13px;top:13px;z-index:2;width:32px;height:32px;border:1px solid #e1e1e3;background:#fff;border-radius:50%;display:grid;place-items:center;color:#777;cursor:pointer;transition:all .2s}
+.fav.active,.fav:hover{background:#e7470b;color:#fff;border-color:#e7470b}
+.details{padding:18px 18px 15px}.brand{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e7470b;margin:0 0 5px}
+h3{font-size:19px;letter-spacing:-.04em;margin:0 0 14px;color:#15171b}
+.mini-specs{display:flex;gap:8px;flex-wrap:wrap}.mini-specs span{background:#f5f5f6;border-radius:999px;padding:7px 9px;color:#777d86;font-size:9px}
+.card-bottom{border-top:1px solid #ededee;margin-top:17px;padding-top:13px;display:flex;align-items:center;justify-content:space-between}
+.price{display:flex;align-items:baseline;gap:6px}.price strong{font-size:20px;letter-spacing:-.05em}.price small{font-size:9px;color:#e7470b}.price>span{font-size:9px;color:#9599a0}
+.see-more{width:36px;height:36px;border:0;border-radius:50%;background:#e7470b;color:#fff;font-size:17px;cursor:pointer;transition:transform .2s,background .2s}.see-more:hover{transform:rotate(45deg);background:#111318}

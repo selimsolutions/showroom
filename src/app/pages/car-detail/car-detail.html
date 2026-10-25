@@ -1,0 +1,37 @@
+<main class="detail-page">
+  <a routerLink="/" class="back-link">← Back to collection</a>
+  @if (car) {
+    <section class="detail-hero">
+      <div class="detail-copy">
+        <p class="eyebrow">THE DETAILS MAKE THE DIFFERENCE</p>
+        <p class="brand">{{ car.brand }}</p>
+        <h1>{{ car.model }}</h1>
+        <p class="description">{{ car.description }}</p>
+        <div class="price-line"><strong>{{ car.price }} <span>DNT</span></strong><small>per day · listed price</small></div>
+        <a routerLink="/" class="primary-button">Explore other cars <span>↗</span></a>
+      </div>
+      <div class="detail-visual">
+        <div class="visual-word">{{ car.brand.split(' ')[0] | uppercase }}</div>
+        <img [src]="'images/' + car.photo" [alt]="car.brand + ' ' + car.model">
+        <div class="image-caption"><span>SHOWROOM EDITION</span><span>NO. {{ car.id < 10 ? '0' + car.id : car.id }}</span></div>
+      </div>
+    </section>
+    <section class="specs-section">
+      <div class="specs-heading"><div><p class="eyebrow">BUILT AROUND YOUR DRIVE</p><h2>Performance <span>at a glance.</span></h2></div><p>Key information, presented simply.</p></div>
+      <div class="spec-grid">
+        <article class="spec-card range-spec">
+          <div class="spec-top"><span>01 / RANGE</span><span class="spec-icon">↗</span></div>
+          <div class="range-number">{{ car.range }}<small> km</small></div>
+          <p>Estimated driving range</p>
+          <div class="range-track"><span [style.width.%]="rangeProgress"></span></div>
+          <div class="range-foot"><span>0 km</span><span>{{ car.range }} km</span></div>
+        </article>
+        <article class="spec-card"><div class="spec-top"><span>02 / POWER</span><span class="spec-icon">⌁</span></div><div class="spec-number">{{ car.power }}<small> CV</small></div><p>Power index from your listing</p></article>
+        <article class="spec-card"><div class="spec-top"><span>03 / AVAILABILITY</span><span class="spec-icon">＋</span></div><div class="spec-number">{{ car.availability }}<small> cars</small></div><p>Currently in stock</p></article>
+      </div>
+      <p class="range-note">Range figures are illustrative showcase values for this student project, not verified manufacturer specifications.</p>
+    </section>
+  } @else {
+    <section class="not-found"><p class="eyebrow">CAR NOT FOUND</p><h1>This car isn't in the collection.</h1><a routerLink="/" class="primary-button">Return to showroom</a></section>
+  }
+</main>

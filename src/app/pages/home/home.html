@@ -1,0 +1,40 @@
+<main class="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">A NEW STANDARD OF OWNERSHIP</p>
+      <h1>Discover <span>remarkable cars,</span><br> selected for you.</h1>
+      <p class="subtitle">Verified style. Confident performance. Your next drive starts here.</p>
+      <div class="hero-actions">
+        <a href="#inventory" class="primary-button">Explore inventory <span>↘</span></a>
+        <a href="#filters" class="secondary-button">Find your car</a>
+      </div>
+      <div class="hero-note"><span class="orange-dot"></span> YOUR NEXT CHAPTER STARTS ON FOUR WHEELS</div>
+    </div>
+    <div class="hero-art" aria-label="Premium car showcase">
+      <div class="hero-watermark">DRIVE</div>
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <img src="images/CLASS-C.webp" alt="Mercedes-Benz C-Class featured car" class="hero-car">
+      <div class="range-card">
+        <span class="range-label">FEATURED MODEL</span>
+        <strong>620<span> km</span></strong>
+        <div class="range-line"><i></i></div>
+        <div class="range-caption"><span>DRIVING RANGE</span><span>01 / 16</span></div>
+      </div>
+      <div class="vertical-label">ENGINEERED TO MOVE YOU</div>
+    </div>
+    <div class="hero-index"><span>01</span> / 04</div>
+  </section>
+
+  <section class="inventory-section" id="inventory">
+    <div class="section-heading">
+      <div><p class="eyebrow">CURATED FOR YOUR DRIVE</p><h2>Find your <span>kind of car.</span></h2></div>
+      <p class="section-description">A considered collection of performance, comfort and character.</p>
+    </div>
+    <div id="filters" class="filters-wrap">
+      <app-filter-panel (onFilterChange)="onFilterChange($event)"></app-filter-panel>
+      <app-search-bar [autos]="filteredAutos" [favorites]="favorites"
+        (onSelectCar)="openCar($event)" (onToggleFavorite)="toggleFavorite($event)">
+      </app-search-bar>
+    </div>
+  </section>
+</main>

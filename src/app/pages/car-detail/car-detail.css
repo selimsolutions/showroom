@@ -1,0 +1,34 @@
+:host{display:block;background:#fff;color:#111318}
+.detail-page{padding:24px clamp(20px,5.3vw,88px) 80px}
+.back-link{display:inline-block;text-decoration:none;color:#646b74;font-size:12px;margin:4px 0 26px;transition:color .2s}.back-link:hover{color:#e7470b}
+.detail-hero{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center;min-height:390px}
+.eyebrow{font-size:9px;letter-spacing:.28em;color:#7d838c;font-weight:650;margin:0 0 22px}
+.brand{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:#e7470b;margin:0 0 7px}
+h1{font-size:clamp(42px,6vw,78px);letter-spacing:-.07em;line-height:.95;margin:0 0 22px;font-weight:760}
+.description{font-size:14px;line-height:1.85;color:#6d747e;max-width:520px}
+.price-line{display:flex;align-items:baseline;gap:12px;margin:25px 0}.price-line strong{font-size:34px;letter-spacing:-.06em}.price-line strong span{font-size:13px;color:#e7470b;letter-spacing:0}.price-line small{color:#92969d;font-size:11px}
+.primary-button{display:inline-flex;gap:20px;padding:13px 21px;border-radius:999px;background:#e7470b;color:#fff;text-decoration:none;font-size:12px;font-weight:650;box-shadow:0 8px 20px #e7470b28;transition:transform .2s}.primary-button:hover{transform:translateY(-3px)}
+.detail-visual{min-height:360px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 55% 70%,#e9eaec,transparent 60%),#f7f7f7;border-radius:28px}
+.detail-visual:after{content:'';position:absolute;bottom:16%;left:10%;right:10%;height:35px;border:1px solid #ed9b78;border-radius:50%;transform:perspective(200px) rotateX(55deg)}
+.detail-visual img{position:relative;z-index:1;width:94%;max-height:310px;object-fit:contain;filter:drop-shadow(0 20px 14px #0002);animation:detailCarIn .8s ease both}
+.visual-word{position:absolute;top:8%;left:5%;font-size:clamp(50px,9vw,130px);font-weight:850;letter-spacing:-.09em;color:transparent;-webkit-text-stroke:1px #e9a07f;opacity:.85}
+.image-caption{position:absolute;bottom:20px;left:24px;right:24px;display:flex;justify-content:space-between;color:#858a92;font-size:8px;letter-spacing:.2em;z-index:2}
+.specs-section{padding-top:75px}
+.specs-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}
+.specs-heading .eyebrow{margin-bottom:12px}
+h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.06em;margin:0}
+h2 span{color:#e7470b}.specs-heading>p{font-size:12px;color:#858a92;margin-bottom:6px}
+.spec-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.spec-card{background:#f8f8f8;border:1px solid #ededee;border-radius:20px;padding:22px;min-height:185px;transition:transform .25s,box-shadow .25s}
+.spec-card:hover{transform:translateY(-5px);box-shadow:0 16px 35px #1111}
+.spec-top{display:flex;justify-content:space-between;align-items:center;font-size:8px;letter-spacing:.19em;color:#8b9098}
+.spec-icon{display:grid;place-items:center;width:28px;height:28px;border:1px solid #e3e3e5;border-radius:50%;font-size:14px;color:#e7470b}
+.range-number,.spec-number{font-size:45px;letter-spacing:-.07em;margin-top:20px;font-weight:500}
+.range-number small,.spec-number small{font-size:12px;color:#e7470b;letter-spacing:0}
+.spec-card p{font-size:11px;color:#858a92;margin:3px 0 18px}
+.range-track{height:4px;background:#e5e5e7;border-radius:5px;overflow:hidden}.range-track span{display:block;height:100%;background:#e7470b;transition:width 1.5s cubic-bezier(.2,.8,.2,1)}
+.range-foot{display:flex;justify-content:space-between;font-size:8px;color:#9a9da3;margin-top:8px}
+.range-note{font-size:10px;color:#8a8e95;margin-top:15px;line-height:1.6}
+.not-found{padding:100px 0;text-align:center}.not-found h1{font-size:clamp(32px,5vw,60px)}
+@keyframes detailCarIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){.detail-hero{grid-template-columns:1fr;gap:20px}.detail-visual{min-height:300px}.spec-grid{grid-template-columns:1fr}.spec-card{min-height:155px}.specs-heading{align-items:start;flex-direction:column}}

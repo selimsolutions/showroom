@@ -1,0 +1,10 @@
+:host{display:block;color:#17191e}
+.panel{display:flex;flex-wrap:wrap;align-items:end;gap:13px;padding:14px;background:#fafafa;border:1px solid #eeeeef;border-radius:15px}
+.field{display:flex;flex-direction:column;gap:7px;flex:1;min-width:135px}
+label{font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#777e87}
+input,select{width:100%;min-width:0;padding:11px 12px;font:inherit;font-size:11px;color:#202227;background:#fff;border:1px solid #e3e3e5;border-radius:9px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{border-color:#e7470b;box-shadow:0 0 0 3px #e7470b12}
+button{padding:12px 17px;border:0;border-radius:999px;font-size:10px;font-weight:650;cursor:pointer;transition:all .2s}
+button.apply{background:#e7470b;color:#fff}button.apply:hover{background:#c93908;transform:translateY(-1px)}
+button.reset{background:#fff;color:#555;border:1px solid #dedee0}button.reset:hover{border-color:#e7470b;color:#e7470b}
+@media(max-width:550px){.panel{align-items:stretch}.field{min-width:calc(50% - 10px)}button{flex:1}}
